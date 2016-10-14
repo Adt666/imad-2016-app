@@ -31,7 +31,7 @@ var articles = {
                     </p>
                 </div>
             </div>`
-    };
+    },
     articleTwo : {
         title: 'Article Two | Aadithyen',
         heading: 'Article Two',
@@ -57,7 +57,7 @@ var articles = {
                     </p>
                 </div>
             </div>`
-    };
+    },
     articleThree : {
         title: 'Article Three | Aadithyen',
         heading: 'Article Three',
@@ -83,7 +83,10 @@ var articles = {
                     </p>
                 </div>
             </div>`
-    };
+    
+    }    
+    
+};
     
     
 
