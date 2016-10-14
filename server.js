@@ -5,33 +5,87 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var articleOne = {
-    title: 'Article One | Aadithyen',
-    heading: 'Article One',
-    date: 'Sep 6 2016',
-    content:` <div class="container">
-            <div>
-                <a href="/">Home</a>
-            </div>
-            <hr>
-            <h3>Article One</h3>
-            <div>
-                Sep 5, 2016
-            </div>
-            <div>
-                <p>
-                    This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
-                </p>
-                <p>
-                    This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
-                </p>
-                <p>
-                    This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
-                </p>
-            </div>
-        </div>`
-};
+var articles = {
+    articleOne : {
+        title: 'Article One | Aadithyen',
+        heading: 'Article One',
+        date: 'Sep 6 2016',
+        content:` <div class="container">
+                <div>
+                    <a href="/">Home</a>
+                </div>
+                <hr>
+                <h3>Article One</h3>
+                <div>
+                    Sep 5, 2016
+                </div>
+                <div>
+                    <p>
+                        This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
+                    </p>
+                    <p>
+                        This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
+                    </p>
+                    <p>
+                        This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
+                    </p>
+                </div>
+            </div>`
+    };
+    articleTwo : {
+        title: 'Article Two | Aadithyen',
+        heading: 'Article Two',
+        date: 'Sep 6 2016',
+        content:` <div class="container">
+                <div>
+                    <a href="/">Home</a>
+                </div>
+                <hr>
+                <h3>Article Two</h3>
+                <div>
+                    Sep 5, 2016
+                </div>
+                <div>
+                    <p>
+                        This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
+                    </p>
+                    <p>
+                        This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
+                    </p>
+                    <p>
+                        This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
+                    </p>
+                </div>
+            </div>`
+    };
+    articleThree : {
+        title: 'Article Three | Aadithyen',
+        heading: 'Article Three',
+        date: 'Sep 6 2016',
+        content:` <div class="container">
+                <div>
+                    <a href="/">Home</a>
+                </div>
+                <hr>
+                <h3>Article Three</h3>
+                <div>
+                    Sep 5, 2016
+                </div>
+                <div>
+                    <p>
+                        This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
+                    </p>
+                    <p>
+                        This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
+                    </p>
+                    <p>
+                        This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
+                    </p>
+                </div>
+            </div>`
+    };
+    
+    
 
 function createTemplate (data) {
     var title = data.title;
