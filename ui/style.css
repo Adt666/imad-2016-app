@@ -1,29 +1,57 @@
 body {
-    font-family: sans-serif;
-    margin-top: 60px;
+    margin: 0px;
+    color: white;
+    font-family: 'Dosis', sans-serif;
 }
-
-.center {
-    text-align: center;
+.intro {
+    display: inline-block;
+    background-image: url("leaf.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    top: 0px;
+    left: 0px;
 }
-
-.text-big {
-    font-size: 300%;
+.prog {
+    display: inline-block;
+    background-color: #131418;
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
 }
-
-.bold {
-    font-weight: bold;
+.model {
+    display: inline-block;
+    background-color: #e67e22;
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
 }
-
-.img-medium {
-    height: 200px;
-}
-
-.container {
-    max-width: 800px;
+.content {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
     margin: 0 auto;
-    color: #4a4a4a;
-    font-family: sans-serif;
-    padding-left: 20px;
-    padding-right: 20px;
+}
+.title {
+    border-style: solid;
+    display: inline-block;
+    border-width: 0px 0px 0px 10px;
+    border-color: white;
+    padding-left: 10px;
+    width: 200px;
+    font-size: 1.5em;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: left;
+}
+img {
+    width: 300px;
+    height: auto;
+}
+.image {
+    display: block;
+    position: relative;
+    float: right;
 }
