@@ -47,11 +47,11 @@ body {
     text-align: left;
 }
 img {
+    display: inline-block;
+    position: relative;
+    top: calc(10vh - 150px);
+    float: right;
     width: 300px;
     height: auto;
-}
-.image {
-    display: block;
-    position: relative;
-    float: right;
+    margin: 10px 0px 0px 0px;
 }
