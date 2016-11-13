@@ -3,29 +3,26 @@ body {
     color: white;
     font-family: 'Dosis', sans-serif;
 }
-.intro {
+.slide {
     display: inline-block;
-    background-image: url("leaf.jpg");
-    background-size: cover;
     height: 100vh;
     width: 100%;
     margin: 0px;
+}
+.intro {
+    background-image: url("leaf.jpg");
+    background-size: cover;
     top: 0px;
     left: 0px;
 }
 .prog {
-    display: inline-block;
-    background-color: #131418;
-    height: 100vh;
-    width: 100%;
-    margin: 0px;
+    background-color: #131418;    
 }
 .model {
-    display: inline-block;
     background-color: #e67e22;
-    height: 100vh;
-    width: 100%;
-    margin: 0px;
+}
+.present {
+    background-color: #2980b9;
 }
 .content {
     display: block;
@@ -54,4 +51,8 @@ img {
     width: 300px;
     height: auto;
     margin: 10px 0px 0px 0px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: white;
+    border-radius: 50%
 }
