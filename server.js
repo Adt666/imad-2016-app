@@ -6,104 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articles = {
-    'article-one': {
-      title: 'Article One | AadithyeN',
-      heading: 'Article One',
-      date: 'Sep 5, 2016',
-      content: `
-          <p>
-              This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
-          </p>
-          <p>
-              This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
-          </p>
-          <p>
-              This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
-          </p>`
-    },
-    'article-two': {
-      title: 'Article Two | AadithyeN',
-      heading: 'Article Two',
-      date: 'Sep 10, 2016',
-      content: `
-          <p>
-              This is the content for my second article.
-          </p>`
-    },
-    'article-three': {
-      title: 'Article Three | AadithyeN',
-      heading: 'Article Three',
-      date: 'Sep 15, 2016',
-      content: `
-          <p>
-              This is the content for my third article.
-          </p>`
-    }
-};
-
-function createTemplate (data) {
-    var title = data.title;
-    var date = data.date;
-    var heading = data.heading;
-    var content = data.content;
-    
-    var htmlTemplate = `
-    <html>
-      <head>
-          <title>
-              ${title}
-          </title>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link href="/ui/style.css" rel="stylesheet" />
-      </head> 
-      <body>
-          <div class="container">
-              <div>
-                  <a href="/">Home</a>
-              </div>
-              <hr/>
-              <h3>
-                  ${heading}
-              </h3>
-              <div>
-                  ${date}
-              </div>
-              <div>
-                ${content}
-              </div>
-          </div>
-      </body>
-    </html>
-    `;
-    return htmlTemplate;
-}
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
-var counter = 0;
-app.get('/counter', function (req, res) {
-   counter = counter + 1;
-   res.send(counter.toString());
-});
-
-var names = [];
-app.get('/submit-name', function(req, res) { // /submit-name?name=xxxx
-  // Get the name from the request
-  var name = req.query.name;
-  
-  names.push(name);
-  // JSON: Javascript Object Notation
-  res.send(JSON.stringify(names));
-});
-
-app.get('/:articleName', function (req, res) {
-  // articleName == article-one
-  // articles[articleName] == {} content object for article one
-  var articleName = req.params.articleName;
-  res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
@@ -113,10 +17,37 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
-
-app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+app.get('/ui/aadi.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'aadi.png'));
 });
+app.get('/ui/game.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'game.png'));
+});
+app.get('/ui/gameb.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'gameb.jpg'));
+});
+app.get('/ui/leaf.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'leaf.jpg'));
+});
+app.get('/ui/model.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'model.png'));
+});
+app.get('/ui/modelb.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'modelb.jpg'));
+});
+app.get('/ui/present.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'present.png'));
+});
+app.get('/ui/presentb.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'presentb.jpg'));
+});
+app.get('/ui/prog.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'prog.png'));
+});
+app.get('/ui/progb.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'progb.jpg'));
+});
+
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
