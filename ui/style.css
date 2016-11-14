@@ -24,6 +24,9 @@ body {
 .present {
     background-color: #2980b9;
 }
+.game {
+    background-color:#1abc9c;
+}
 .content {
     display: block;
     position: relative;
